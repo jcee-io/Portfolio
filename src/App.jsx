@@ -87,6 +87,7 @@ const ProjectEntry = props => {
         height: 100%;
         font-size: 30px;
         padding-top: 75px;
+        opacity: 0.9;
         transition: color 0.3s, opacity 0.5s;
       }
 
