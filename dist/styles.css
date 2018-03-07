@@ -90,14 +90,12 @@ nav {
 	height: 200px;
 	color: darkgrey;
 	text-align: center;
-	transition: color 0.5s, background 1s;
+	transition: color 0.5s;
 
 }
 
 .project-entry:hover {
 	color: transparent;
-	background: lightyellow;
-	
 }
 
 #projects > div {
