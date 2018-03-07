@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import projectList from '../projects';
+import $ from 'jquery';
+
 const Header = () => (
   <nav className="navbar navbar-inverse">
     <div className="container-fluid">
@@ -43,11 +45,27 @@ const About = () => (
     </div>
   </div>
 );
-const ProjectEntry = props => (
-  <div className="project-entry jumbotron">
-    <h2>{props.name}</h2>
-  </div>
-);
+const ProjectEntry = props => {
+  let name = props.name.replace(/ /g,'-');
+
+  $('head').append(`
+    <style>
+      #${name} {
+        transition: background 1s;
+      }
+
+      #${name}:hover {
+        background: green;
+      }
+    </style>
+  `);
+
+  return (
+      <div id={name} className="project-entry jumbotron">
+        <h2>{props.name}</h2>
+      </div>
+  );
+}
 
 const Projects = () => (
   <div id="projects">
