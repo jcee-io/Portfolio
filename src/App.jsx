@@ -144,14 +144,21 @@ const Contact = () => (
   </div>
 );
 
-const App = () => (
-  <div>
-    <Header />
-    <Intro />
-    <About />
-    <Projects />
-    <Contact />
-  </div>
-);
+class App extends Component {
+  constructor() {
+    super();
+  }
 
+  render() {
+    return (
+      <div>
+        <Header />
+        <Intro />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
+    );
+  }
+}
 export default App;
