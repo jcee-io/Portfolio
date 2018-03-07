@@ -110,6 +110,10 @@ const ProjectEntry = props => {
 const Projects = props => (
   <div id="projects">
     <h1>Projects</h1>
+    <div id="project-desc-filter-buttons">
+      <button className="desc btn btn-outline-light active">Gallery View</button>
+      <button className="desc btn btn-outline-light">Descriptive View</button>
+    </div>
     <div id="project-filter-buttons">
       <button onClick={props.handler} className="filter btn btn-outline-light active">Featured</button>
       <button onClick={props.handler} className="filter btn btn-outline-light">Frontend</button>

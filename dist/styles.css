@@ -121,7 +121,17 @@ nav {
 }
 
 #project-filter-buttons{
-	margin: 3% 0 0 0;
+	margin: 2% 0 0 0;
+}
+
+#project-desc-filter-buttons {
+	margin: 2% 0 0 0;
+	width: 100%;
+	display: flex;
+}
+
+#project-desc-filter-buttons button {
+	width: 100%;
 }
 
 /*****************************************
