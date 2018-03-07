@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import projectList from '../projects';
+import Featured from '../projects/projects';
+import FE from '../projects/FEprojects';
+import BE from '../projects/BEprojects';
+import FS from '../projects/FSprojects';
+import DV from '../projects/DVprojects';
+import Tools from '../projects/tools';
+
 import $ from 'jquery';
 
 const Header = () => (
@@ -108,12 +114,13 @@ const Projects = props => (
       <button onClick={props.handler} className="filter btn btn-outline-light active">Featured</button>
       <button onClick={props.handler} className="filter btn btn-outline-light">Frontend</button>
       <button onClick={props.handler} className="filter btn btn-outline-light">Backend</button>
+      <button onClick={props.handler} className="filter btn btn-outline-light">Full Stack</button>
       <button onClick={props.handler} className="filter btn btn-outline-light">Data Visualization</button>
       <button onClick={props.handler} className="filter btn btn-outline-light">Tools</button>
     </div>
     <div id="project-list">
-      {projectList.map(project => 
-        <div>
+      {props.projects.map(project => 
+        <div className="project-entry-outer">
           <ProjectEntry {...project}/>
           <div id="project-buttons">
             <a href={project.github || '#'} className="btn btn-outline-secondary">Github</a>
@@ -147,13 +154,16 @@ class App extends Component {
     super();
 
     this.state = {
-      filter: 'featured'
+      filter: 'featured',
+      projects: Featured
     };
   }
 
   handleFilter(event) {
     const node = event.target;
     const filter = event.target.textContent;
+    let projects;
+
 
     $('.filter').each(function() {
       $(this).removeClass('active');
@@ -161,7 +171,21 @@ class App extends Component {
     
     $(node).addClass('active');
 
-    this.setState({ filter });
+    if(filter === 'Featured') {
+      projects = Featured;
+    } else if (filter === 'Frontend') {
+      projects = FE;
+    } else if (filter === 'Backend') {
+      projects = BE;
+    } else if (filter === 'Full Stack') {
+      projects = FS;
+    } else if (filter === 'Data Visualization') {
+      projects = DV;
+    } else if (filter === 'Tools') {
+      projects = Tools;
+    } 
+
+    this.setState({ projects });
   }
 
   render() {
@@ -170,7 +194,7 @@ class App extends Component {
         <Header />
         <Intro />
         <About />
-        <Projects handler={this.handleFilter.bind(this)} />
+        <Projects projects={this.state.projects} handler={this.handleFilter.bind(this)} />
         <Contact />
       </div>
     );
