@@ -141,15 +141,9 @@ const Projects = props => (
 const Contact = () => (
   <div id="contact">
     <h1>Contact Me</h1>
-    <form className="form-group" action="/form" method="POST">
-      <label>Name: <br/><input className="form-control"/></label>
-      <br/>
-      <label>Email: <br /><input className="form-control"/></label>
-      <br/>
-      <label>Message: <br/><textarea className="form-control"/></label>
-      <br/>
-      <input className="btn btn-default btn-lg" type="submit"/>
-    </form>
+    <h2>Email: just.v.cruz@gmail.com</h2>
+    <h2>Other Sites: <a href="https://www.linkedin.com/in/jcruzz/">LinkedIn</a> | <a href="https://github.com/jcruzz">Github</a></h2>
+    <p style={{margin: '10% 20% 0 20%'}}>Created By Justin Cruz @ 2018. This website and all projects shown are open source. Feel free to contribute at your convenience.</p>
   </div>
 );
 
