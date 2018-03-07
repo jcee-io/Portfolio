@@ -1,0 +1,98 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+nav {
+	margin: 0;
+	width: 100%;
+	position: fixed !important;
+}
+
+#about, #intro, #projects {
+	width: 100%;
+	height: 100%;
+}
+
+#contact {
+	width: 100%;
+	height: 95%;
+}
+
+#intro {
+	padding: 20%;
+	margin: auto;
+	background: black;
+}
+
+/*************************************
+  For the intro section
+**************************************/
+
+#intro p {
+	animation: fadein 3.5s;
+	color: lightgrey;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+#header-1 {
+	font-size: 80px;
+	text-shadow: 1px 1px 1px black;
+}
+
+#header-2 {
+	font-size: 30px;
+	text-shadow: 1px 1px 1px black;
+}
+
+/*************************************************
+ About Me
+**************************************************/
+
+#about {
+	padding: 1% 4%;
+}
+
+#about div {
+	margin: 2% 0 10% 0;
+}
+#about h1 {
+	font-size: 80px;
+}
+
+#about p {
+	font-size: 30px;
+	margin-top: 75px;
+}
+
+
+#projects {
+	background: black;
+	color: white;
+	padding: 1% 4%;
+}
+
+#projects h1 {
+	font-size: 80px;
+}
+
+.project-entry {
+	width: 400px;
+	height: 200px;
+	color: darkgrey;
+	text-align: center;
+	transition-duration: 1s;
+}
+
+.project-entry:hover {
+	opacity: 0;
+}
+
+#projects > div {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
