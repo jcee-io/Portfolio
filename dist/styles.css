@@ -83,6 +83,7 @@ nav {
 	width: 100px;
 }
 
+
 #projects h1 {
 	font-size: 80px;
 }
@@ -115,6 +116,10 @@ nav {
 
 #project-filter-buttons button {
 	width: 100%;
+}
+
+#project-filter-buttons{
+	margin: 3% 0 5% 0;
 }
 
 /*****************************************

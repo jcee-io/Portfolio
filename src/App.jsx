@@ -66,8 +66,6 @@ const ProjectEntry = props => {
 
   let background = props.thumbnail ? `url('${props.thumbnail}')` : 'url(\'https://i.imgur.com/Ey20XRP.png\')';
 
-  console.log(props.thumbnail);
-
   $('head').append(`
     <style>
       #outer-${name} {
@@ -103,15 +101,15 @@ const ProjectEntry = props => {
   );
 }
 
-const Projects = () => (
+const Projects = props => (
   <div id="projects">
     <h1>Projects</h1>
     <div id="project-filter-buttons">
-      <button className="btn btn-outline-light active">Featured</button>
-      <button className="btn btn-outline-light">Frontend</button>
-      <button className="btn btn-outline-light">Backend</button>
-      <button className="btn btn-outline-light">Data Visualization</button>
-      <button className="btn btn-outline-light">Tools</button>
+      <button onClick={props.handler} className="filter btn btn-outline-light active">Featured</button>
+      <button onClick={props.handler} className="filter btn btn-outline-light">Frontend</button>
+      <button onClick={props.handler} className="filter btn btn-outline-light">Backend</button>
+      <button onClick={props.handler} className="filter btn btn-outline-light">Data Visualization</button>
+      <button onClick={props.handler} className="filter btn btn-outline-light">Tools</button>
     </div>
     <div id="project-list">
       {projectList.map(project => 
@@ -147,6 +145,23 @@ const Contact = () => (
 class App extends Component {
   constructor() {
     super();
+
+    this.state = {
+      filter: 'featured'
+    };
+  }
+
+  handleFilter(event) {
+    const node = event.target;
+    const filter = event.target.textContent;
+
+    $('.filter').each(function() {
+      $(this).removeClass('active');
+    });
+    
+    $(node).addClass('active');
+
+    this.setState({ filter });
   }
 
   render() {
@@ -155,7 +170,7 @@ class App extends Component {
         <Header />
         <Intro />
         <About />
-        <Projects />
+        <Projects handler={this.handleFilter.bind(this)} />
         <Contact />
       </div>
     );
