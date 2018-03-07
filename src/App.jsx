@@ -3,25 +3,40 @@ import projectList from '../projects';
 import $ from 'jquery';
 
 const Header = () => (
-  <nav className="navbar navbar-inverse">
-    <div className="container-fluid">
-      <div className="navbar-header">
-        <a className="navbar-brand" href="#">jCruzz</a>
-      </div>
-      <ul className="nav navbar-nav">
-        <li className="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact Me</a></li>
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a className="navbar-brand" href="/">jCruzz</a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarText">
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item active">
+          <a className="nav-link" href="#">About<span className="sr-only">(current)</span></a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Projects</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Contact</a>
+        </li>
       </ul>
-      <ul className="nav navbar-nav navbar-right">
+      <ul className="navbar-nav ">
+        <li className="nav-item">
+          <a className="nav-link" href="#">Github</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">LinkedIn</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Resume</a>
+        </li>
       </ul>
     </div>
   </nav>
 );
 
 const Intro = () => (
-  <div id="intro" className="container">
+  <div id="intro">
     <p id="header-1">Hello, I'm Justin.</p>
     <p id="header-2">
     I'm a software engineer based in the San Francisco Bay Area.
@@ -47,34 +62,68 @@ const About = () => (
 );
 const ProjectEntry = props => {
   let name = props.name.replace(/ /g,'-');
+  name = name.replace(/./g,'-');
+
+  let background = props.thumbnail ? `url('${props.thumbnail}')` : 'url(\'https://i.imgur.com/Ey20XRP.png\')';
+
+  console.log(props.thumbnail);
 
   $('head').append(`
     <style>
-      #${name} {
-        transition: background 1s;
+      #outer-${name} {
+        background: ${background};
+        background-size: 100% 100%;
       }
 
+
+      #${name} {
+        background: lightgrey;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        padding-top: 75px;
+        transition: color 0.3s, opacity 0.5s;
+      }
+
+
       #${name}:hover {
-        background: green;
+        opacity: 0.2;
+        color: transparent;
       }
     </style>
   `);
 
   return (
-      <div id={name} className="project-entry jumbotron">
-        <h2>{props.name}</h2>
+    <div id={`outer-${name}`}className="project-entry">
+      <div id={name}>
+        <p>{props.name}</p>
       </div>
+    </div>
   );
 }
 
 const Projects = () => (
   <div id="projects">
     <h1>Projects</h1>
-    <div>
+    <div id="project-filter-buttons">
+      <button className="btn btn-outline-light active">Featured</button>
+      <button className="btn btn-outline-light">Frontend</button>
+      <button className="btn btn-outline-light">Backend</button>
+      <button className="btn btn-outline-light">Data Visualization</button>
+      <button className="btn btn-outline-light">Tools</button>
+    </div>
+    <div id="project-list">
       {projectList.map(project => 
-        <ProjectEntry
-          name={project.name}
-        />
+        <div>
+          <ProjectEntry {...project}/>
+          <div id="project-buttons">
+            <a href={project.github || '#'} className="btn btn-outline-secondary">Github</a>
+            {project.liveLink ? 
+              <a href={project.liveLink} className="btn btn-outline-secondary">Live Link</a> : null
+            }
+          </div>
+        </div>
       )}
     </div>
   </div>

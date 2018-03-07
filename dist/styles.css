@@ -76,32 +76,45 @@ nav {
 	color: white;
 	padding: 1% 4%;
 	transition-duration: 2s;
+	overflow: auto;
 }
 
-#projects:hover {
-	
+#projects button {
+	width: 100px;
 }
+
 #projects h1 {
 	font-size: 80px;
 }
 
+#project-buttons {
+	display: flex;
+}
+
+#project-buttons a {
+	width: 100%;
+}
 .project-entry {
 	width: 400px;
 	height: 200px;
 	color: darkgrey;
 	text-align: center;
-	transition: color 0.5s;
-
 }
 
-.project-entry:hover {
-	color: transparent;
-}
-
-#projects > div {
+#projects #project-list {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#projects #project-filter-buttons {
+	display: flex;
+	width: 100%;
+}
+
+#project-filter-buttons button {
+	width: 100%;
 }
 
 /*****************************************
