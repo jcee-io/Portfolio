@@ -32,7 +32,13 @@ const About = () => (
     <div>
       <h1>About Me</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus a tellus scelerisque feugiat. In ut aliquet nunc, at ullamcorper nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus diam nisl, ultricies nec tortor tincidunt, dignissim tempus lacus. Praesent ultricies mauris quis nibh sollicitudin rutrum. Cras mattis finibus rutrum. Donec eleifend purus at mauris blandit, vel sollicitudin urna viverra. Nunc ornare, turpis non dignissim iaculis, quam augue bibendum lorem, ut maximus nibh diam vel elit. Morbi eu sem quis ligula blandit tempor. Pellentesque in lectus a nunc lacinia laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sed ante vestibulum, pulvinar massa quis, suscipit magna. Pellentesque vitae tristique ante.
+        I see myself as an inventor that uses the world of coding as my sandbox. There are many forms
+        of technology I would like to explore, reach my full potential, and fulfill my passion in 
+        making new things and immersing myself in technology.
+        <br/><br/>
+        I am experienced in developing full-stack applications, creating microservices, and designing tools
+        to enhance development. My projects are divided into four categories, Frontend, Backend, Full-Stack,
+        Data Visualization, and Tools. I invite <strong>you</strong>, the viewer, to take a look at my projects. 
       </p>
     </div>
   </div>
@@ -59,14 +65,14 @@ const Projects = () => (
 const Contact = () => (
   <div id="contact">
     <h1>Contact Me</h1>
-    <form action="/form" method="POST">
-      <label>Name: <br/><input /></label>
+    <form className="form-group" action="/form" method="POST">
+      <label>Name: <br/><input className="form-control"/></label>
       <br/>
-      <label>Email: <br /><input /></label>
+      <label>Email: <br /><input className="form-control"/></label>
       <br/>
-      <label>Message: <br/><textarea /></label>
+      <label>Message: <br/><textarea className="form-control"/></label>
       <br/>
-      <input type="submit"/>
+      <input className="btn btn-default btn-lg" type="submit"/>
     </form>
   </div>
 );

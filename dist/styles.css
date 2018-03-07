@@ -67,6 +67,9 @@ nav {
 	margin-top: 75px;
 }
 
+/*****************************************
+ Projects and Project Entry
+******************************************/
 
 #projects {
 	background: black;
@@ -101,4 +104,23 @@ nav {
 	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
+}
+
+/*****************************************
+ Contact Me
+******************************************/
+#contact {
+	padding: 1% 2%;
+}
+#contact h1{
+	font-size: 80px;
+}
+
+#contact label {
+	font-size: 20px;
+	width: 50%;
+}
+
+#contact input {
+	font-size: 20px;
 }
