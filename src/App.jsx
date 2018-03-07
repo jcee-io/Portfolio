@@ -13,8 +13,6 @@ const Header = () => (
         <li><a href="#">Contact Me</a></li>
       </ul>
       <ul className="nav navbar-nav navbar-right">
-        <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </nav>
@@ -42,8 +40,6 @@ const About = () => (
 const ProjectEntry = props => (
   <div className="project-entry jumbotron">
     <h2>{props.name}</h2>
-    <p>image</p>
-    <p>{props.description}</p>
   </div>
 );
 

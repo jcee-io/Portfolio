@@ -35,7 +35,6 @@ nav {
 
 @keyframes fadein {
   from { opacity: 0; }
-  to   { opacity: 1; }
 }
 
 #header-1 {
@@ -73,8 +72,12 @@ nav {
 	background: black;
 	color: white;
 	padding: 1% 4%;
+	transition-duration: 2s;
 }
 
+#projects:hover {
+	
+}
 #projects h1 {
 	font-size: 80px;
 }
@@ -84,11 +87,14 @@ nav {
 	height: 200px;
 	color: darkgrey;
 	text-align: center;
-	transition-duration: 1s;
+	transition: color 0.5s, background 1s;
+
 }
 
 .project-entry:hover {
-	opacity: 0;
+	color: transparent;
+	background: lightyellow;
+	
 }
 
 #projects > div {
