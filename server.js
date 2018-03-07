@@ -21,6 +21,8 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
  
+ app.get('*', (req,res) => res.redirect('/'));
+ 
 const server = app.listen(process.env.PORT || 3000, function() {
   const host = server.address().address;
   const port = server.address().port;
