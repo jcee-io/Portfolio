@@ -10,25 +10,25 @@ const Header = () => (
     </button>
     <div className="collapse navbar-collapse" id="navbarText">
       <ul className="navbar-nav mr-auto">
-        <li className="nav-item active">
-          <a className="nav-link" href="#">About<span className="sr-only">(current)</span></a>
+        <li className="nav-item">
+          <a className="nav-link" href="#intro">Intro</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Projects</a>
+          <a className="nav-link" href="#about">About</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Contact</a>
+          <a className="nav-link" href="#projects">Projects</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
       <ul className="navbar-nav ">
         <li className="nav-item">
-          <a className="nav-link" href="#">Github</a>
+          <a className="nav-link" href="https://github.com/jcruzz">Github</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">LinkedIn</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Resume</a>
+          <a className="nav-link" href="https://www.linkedin.com/in/jcruzz/">LinkedIn</a>
         </li>
       </ul>
     </div>
