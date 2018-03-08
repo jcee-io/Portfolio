@@ -53,8 +53,8 @@ module.exports = [
   },
   {
   	name: 'Water Walls',
-    thumbnail: null,
-  	liveLink: null,
+    thumbnail: 'https://i.imgur.com/RgvNX63.png',
+  	liveLink: 'https://secure-lowlands-83069.herokuapp.com/',
     github: 'https://github.com/jcruzz/water-walls',
     language: 'Javascript',
     stack: 'Node/Express',
