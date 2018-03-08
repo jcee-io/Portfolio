@@ -53,7 +53,7 @@ const Intro = () => (
 const About = () => (
   <div id="about">
     <div>
-      <h1>About Me</h1>
+      <h1 className="header">About Me</h1>
       <p>
         I see myself as an inventor that uses the world of coding as my sandbox. There are many forms
         of technology I would like to explore, reach my full potential, and fulfill my passion in 
@@ -97,7 +97,7 @@ const ProjectEntry = props => {
 
 const Projects = props => (
   <div id="projects">
-    <h1>Projects</h1>
+    <h1 className="header">Projects</h1>
     <div id="project-desc-filter-buttons">
       <button onClick={props.viewHandler} className="desc btn btn-outline-light active">Gallery View</button>
       <button onClick={props.viewHandler} className="desc btn btn-outline-light">Descriptive View</button>
@@ -122,7 +122,7 @@ const Projects = props => (
 
 const Contact = () => (
   <div id="contact">
-    <h1>Contact Me</h1>
+    <h1 className="header">Contact Me</h1>
     <h2>Email: just.v.cruz@gmail.com</h2>
     <h2>Other Sites: <a target="blank_" href="https://www.linkedin.com/in/jcruzz/">LinkedIn</a> | <a target="blank_" href="https://github.com/jcruzz">Github</a></h2>
     <p style={{margin: '10% 20% 0 20%'}}>Created By Justin Cruz @ 2018. This website and all projects shown are open source. Feel free to contribute at your convenience.</p>
