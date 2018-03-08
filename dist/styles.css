@@ -117,17 +117,23 @@ nav {
 	width: 100%;
 }
 
+#project-view-hub {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 #project-filter-buttons button {
 	width: 100%;
 }
 
 #project-filter-buttons{
 	margin: 2% 0 0 0;
+	width: 60% !important;
 }
 
 #project-desc-filter-buttons {
 	margin: 2% 0 0 0;
-	width: 100%;
+	width: 25% !important;
 	display: flex;
 }
 

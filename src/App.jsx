@@ -106,17 +106,19 @@ const DetailedEntry = props => (
 const Projects = props => (
   <div id="projects">
     <h1 className="header">Projects</h1>
-    <div id="project-desc-filter-buttons">
-      <button onClick={props.viewHandler} className="desc btn btn-outline-light active">Gallery View</button>
-      <button onClick={props.viewHandler} className="desc btn btn-outline-light">Detailed View</button>
-    </div>
-    <div id="project-filter-buttons">
-      <button onClick={props.handler} className="filter btn btn-outline-light active">Featured</button>
-      <button onClick={props.handler} className="filter btn btn-outline-light">Frontend</button>
-      <button onClick={props.handler} className="filter btn btn-outline-light">Backend</button>
-      <button onClick={props.handler} className="filter btn btn-outline-light">Full Stack</button>
-      <button onClick={props.handler} className="filter btn btn-outline-light">Data Visualization</button>
-      <button onClick={props.handler} className="filter btn btn-outline-light">Tools</button>
+    <div id="project-view-hub">
+      <div id="project-desc-filter-buttons">
+        <button onClick={props.viewHandler} className="desc btn btn-outline-light active">Gallery View</button>
+        <button onClick={props.viewHandler} className="desc btn btn-outline-light">Detailed View</button>
+      </div>
+      <div id="project-filter-buttons">
+        <button onClick={props.handler} className="filter btn btn-outline-light active">Featured</button>
+        <button onClick={props.handler} className="filter btn btn-outline-light">Frontend</button>
+        <button onClick={props.handler} className="filter btn btn-outline-light">Backend</button>
+        <button onClick={props.handler} className="filter btn btn-outline-light">Full Stack</button>
+        <button onClick={props.handler} className="filter btn btn-outline-light">Data Visualization</button>
+        <button onClick={props.handler} className="filter btn btn-outline-light">Tools</button>
+      </div>
     </div>
     {props.view === 'Gallery View' ?
       <div id="project-list">
