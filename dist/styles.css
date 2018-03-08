@@ -13,6 +13,9 @@ nav {
 	height: 100%;
 }
 
+.header {
+	font-family: 'Roboto', sans-serif;
+}
 #contact {
 	width: 100%;
 	max-height: 95%;
