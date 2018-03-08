@@ -57,53 +57,42 @@ const About = () => (
       <p>
         I see myself as an inventor that uses the world of coding as my sandbox. There are many forms
         of technology I would like to explore, reach my full potential, and fulfill my passion in 
-        making new things and immersing myself in technology.
-        <br/><br/>
-        I am experienced in developing full-stack applications, creating microservices, and designing tools
-        to enhance development. My projects are divided into four categories, Frontend, Backend, Full-Stack,
-        Data Visualization, and Tools. I invite <strong>you</strong>, the viewer, to take a look at my projects. 
+        making new things and immersing myself in technology. I've developed full-stack applications, creating microservices, and designing tools
+        to enhance development. 
       </p>
     </div>
   </div>
 );
 const ProjectEntry = props => {
-  let name = props.name.replace(/ /g,'-');
-  name = name.replace(/./g,'-');
+  let name = props.name.replace(/\s+/g,'-');
+  name = name.replace(/\./g,'-');
 
   let background = props.thumbnail ? `url('${props.thumbnail}')` : 'url(\'https://i.imgur.com/Ey20XRP.png\')';
 
   $('head').append(`
     <style>
-      #outer-${name} {
+      #${name} {
         background: ${background};
         background-size: 100% 100%;
-      }
-
-
-      #${name} {
-        background: lightgrey;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        font-size: 30px;
-        padding-top: 75px;
-        opacity: 0.9;
-        transition: color 0.3s, opacity 0.5s;
-      }
-
-
-      #${name}:hover {
-        opacity: 0.2;
-        color: transparent;
+        width: 400px;
+        height: 200px;
       }
     </style>
   `);
 
+  console.log(name);
+
   return (
-    <div id={`outer-${name}`}className="project-entry">
-      <div id={name}>
-        <p>{props.name}</p>
+    <div className="project-entry">
+      <h3>{props.name}</h3>
+      <div id={`${name}`} >
       </div>
+        <div id="project-buttons">
+          <a href={props.github || '#'} className="btn btn-outline-secondary">Github</a>
+          {props.liveLink ? 
+            <a href={props.liveLink} className="btn btn-outline-secondary">Live Link</a> : null
+          }
+        </div>
     </div>
   );
 }
@@ -127,12 +116,6 @@ const Projects = props => (
       {props.projects.map(project => 
         <div className="project-entry-outer">
           <ProjectEntry {...project}/>
-          <div id="project-buttons">
-            <a href={project.github || '#'} className="btn btn-outline-secondary">Github</a>
-            {project.liveLink ? 
-              <a href={project.liveLink} className="btn btn-outline-secondary">Live Link</a> : null
-            }
-          </div>
         </div>
       )}
     </div>
