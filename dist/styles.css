@@ -135,6 +135,18 @@ nav {
 	width: 100%;
 }
 
+.project-detailed-list-entry {
+	margin-top: 4%;
+}
+
+.project-detailed-list-entry h3 {
+	font-size: 40px;
+}
+
+.project-detailed-list-entry p {
+	font-size: 20px;
+}
+
 /*****************************************
  Contact Me
 ******************************************/
