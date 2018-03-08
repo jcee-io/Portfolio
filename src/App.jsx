@@ -96,7 +96,7 @@ const ProjectEntry = props => {
 }
 
 const DetailedEntry = props => (
-  <div>
+  <div className="project-detailed-list-entry">
     <h3>{props.name}</h3>
     <p>Language:<br/>{props.language || 'Unknown'}</p>
     <p>Stack:<br/>{props.stack || 'Unknown'}</p>
@@ -127,7 +127,7 @@ const Projects = props => (
         )}
       </div>
       :
-      <div>
+      <div id="project-detailed-list">
         {props.projects.map(project => 
           <div>
             <DetailedEntry {...project}/>
