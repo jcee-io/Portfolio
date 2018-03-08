@@ -6,7 +6,7 @@ module.exports = [
     github: 'https://github.com/jcruzz/react-router-auth-boilerplate-sql'
   },
   {
-  	name: 'React w/ Redux Starter',
+  	name: 'React with Redux Starter',
     thumbnail: null,
   	liveLink: null,
     github: 'https://github.com/jcruzz/redux-starter'
