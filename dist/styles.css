@@ -8,7 +8,7 @@ nav {
 	position: fixed !important;
 }
 
-#about, #intro, #projects {
+#intro, #projects {
 	width: 100%;
 	height: 100%;
 }
@@ -16,8 +16,9 @@ nav {
 .header {
 	font-family: 'Roboto', sans-serif;
 }
-#contact {
+#contact, #about {
 	width: 100%;
+	height: auto;
 	max-height: 95%;
 }
 
