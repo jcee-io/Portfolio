@@ -85,12 +85,12 @@ const ProjectEntry = props => {
       <h3>{props.name}</h3>
       <div id={`${name}`} >
       </div>
-        <div id="project-buttons">
-          <a href={props.github || '#'} target="blank_" className="btn btn-outline-secondary">Github</a>
-          {props.liveLink ? 
-            <a href={props.liveLink} target="blank_" className="btn btn-outline-secondary">Live Link</a> : null
-          }
-        </div>
+      <div id="project-buttons">
+        <a href={props.github || '#'} target="blank_" className="btn btn-outline-secondary">Github</a>
+        {props.liveLink ? 
+          <a href={props.liveLink} target="blank_" className="btn btn-outline-secondary">Live Link</a> : null
+        }
+      </div>
     </div>
   );
 }
@@ -101,6 +101,12 @@ const DetailedEntry = props => (
     <p>Language:<br/>{props.language || 'Unknown'}</p>
     <p>Stack:<br/>{props.stack || 'Unknown'}</p>
     <p> Description:<br/>{props.info || 'None, will update'}</p>
+      <div id="project-buttons">
+        <a href={props.github || '#'} target="blank_" className="btn btn-outline-secondary">Github</a>
+        {props.liveLink ? 
+          <a href={props.liveLink} target="blank_" className="btn btn-outline-secondary">Live Link</a> : null
+        }
+      </div>
   </div>
 );
 const Projects = props => (
