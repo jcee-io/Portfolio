@@ -80,8 +80,6 @@ const ProjectEntry = props => {
     </style>
   `);
 
-  console.log(name);
-
   return (
     <div className="project-entry">
       <h3>{props.name}</h3>
@@ -101,8 +99,8 @@ const Projects = props => (
   <div id="projects">
     <h1>Projects</h1>
     <div id="project-desc-filter-buttons">
-      <button className="desc btn btn-outline-light active">Gallery View</button>
-      <button className="desc btn btn-outline-light">Descriptive View</button>
+      <button onClick={props.viewHandler} className="desc btn btn-outline-light active">Gallery View</button>
+      <button onClick={props.viewHandler} className="desc btn btn-outline-light">Descriptive View</button>
     </div>
     <div id="project-filter-buttons">
       <button onClick={props.handler} className="filter btn btn-outline-light active">Featured</button>
@@ -136,11 +134,23 @@ class App extends Component {
     super();
 
     this.state = {
-      filter: 'featured',
+      view: 'gallery',
       projects: Featured
     };
   }
 
+  handleView(event) {
+    const node = event.target;
+    const view = event.target.textContent;
+
+    $('.desc').each(function() {
+      $(this).removeClass('active');
+    });
+    
+    $(node).addClass('active');
+
+    this.setState({ view });
+  }
   handleFilter(event) {
     const node = event.target;
     const filter = event.target.textContent;
@@ -176,7 +186,7 @@ class App extends Component {
         <Header />
         <Intro />
         <About />
-        <Projects projects={this.state.projects} handler={this.handleFilter.bind(this)} />
+        <Projects projects={this.state.projects} viewHandler={this.handleView.bind(this)} handler={this.handleFilter.bind(this)} />
         <Contact />
       </div>
     );
