@@ -31,10 +31,10 @@ const Header = () => (
       </ul>
       <ul className="navbar-nav ">
         <li className="nav-item">
-          <a className="nav-link" href="https://github.com/jcruzz">Github</a>
+          <a className="nav-link" target="blank_" href="https://github.com/jcruzz">Github</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="https://www.linkedin.com/in/jcruzz/">LinkedIn</a>
+          <a className="nav-link" target="blank_" href="https://www.linkedin.com/in/jcruzz/">LinkedIn</a>
         </li>
       </ul>
     </div>
@@ -88,9 +88,9 @@ const ProjectEntry = props => {
       <div id={`${name}`} >
       </div>
         <div id="project-buttons">
-          <a href={props.github || '#'} className="btn btn-outline-secondary">Github</a>
+          <a href={props.github || '#'} target="blank_" className="btn btn-outline-secondary">Github</a>
           {props.liveLink ? 
-            <a href={props.liveLink} className="btn btn-outline-secondary">Live Link</a> : null
+            <a href={props.liveLink} target="blank_" className="btn btn-outline-secondary">Live Link</a> : null
           }
         </div>
     </div>
@@ -126,7 +126,7 @@ const Contact = () => (
   <div id="contact">
     <h1>Contact Me</h1>
     <h2>Email: just.v.cruz@gmail.com</h2>
-    <h2>Other Sites: <a href="https://www.linkedin.com/in/jcruzz/">LinkedIn</a> | <a href="https://github.com/jcruzz">Github</a></h2>
+    <h2>Other Sites: <a target="blank_" href="https://www.linkedin.com/in/jcruzz/">LinkedIn</a> | <a target="blank_" href="https://github.com/jcruzz">Github</a></h2>
     <p style={{margin: '10% 20% 0 20%'}}>Created By Justin Cruz @ 2018. This website and all projects shown are open source. Feel free to contribute at your convenience.</p>
   </div>
 );
