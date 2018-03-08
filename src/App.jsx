@@ -95,12 +95,20 @@ const ProjectEntry = props => {
   );
 }
 
+const DetailedEntry = props => (
+  <div>
+    <h3>{props.name}</h3>
+    <p>Language:<br/>{props.language || 'Unknown'}</p>
+    <p>Stack:<br/>{props.stack || 'Unknown'}</p>
+    <p> Description:<br/>{props.info || 'None, will update'}</p>
+  </div>
+);
 const Projects = props => (
   <div id="projects">
     <h1 className="header">Projects</h1>
     <div id="project-desc-filter-buttons">
       <button onClick={props.viewHandler} className="desc btn btn-outline-light active">Gallery View</button>
-      <button onClick={props.viewHandler} className="desc btn btn-outline-light">Descriptive View</button>
+      <button onClick={props.viewHandler} className="desc btn btn-outline-light">Detailed View</button>
     </div>
     <div id="project-filter-buttons">
       <button onClick={props.handler} className="filter btn btn-outline-light active">Featured</button>
@@ -110,13 +118,23 @@ const Projects = props => (
       <button onClick={props.handler} className="filter btn btn-outline-light">Data Visualization</button>
       <button onClick={props.handler} className="filter btn btn-outline-light">Tools</button>
     </div>
-    <div id="project-list">
-      {props.projects.map(project => 
-        <div className="project-entry-outer">
-          <ProjectEntry {...project}/>
-        </div>
-      )}
-    </div>
+    {props.view === 'Gallery View' ?
+      <div id="project-list">
+        {props.projects.map(project => 
+          <div className="project-entry-outer">
+            <ProjectEntry {...project}/>
+          </div>
+        )}
+      </div>
+      :
+      <div>
+        {props.projects.map(project => 
+          <div>
+            <DetailedEntry {...project}/>
+          </div>
+        )}
+      </div>
+    }
   </div>
 );
 
@@ -134,7 +152,7 @@ class App extends Component {
     super();
 
     this.state = {
-      view: 'gallery',
+      view: 'Gallery View',
       projects: Featured
     };
   }
@@ -186,7 +204,11 @@ class App extends Component {
         <Header />
         <Intro />
         <About />
-        <Projects projects={this.state.projects} viewHandler={this.handleView.bind(this)} handler={this.handleFilter.bind(this)} />
+        <Projects
+          projects={this.state.projects}
+          view={this.state.view}
+          viewHandler={this.handleView.bind(this)}
+          handler={this.handleFilter.bind(this)} />
         <Contact />
       </div>
     );
