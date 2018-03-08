@@ -14,7 +14,7 @@ module.exports = [
   },
   {
   	name: 'Redux Registration Form',
-    thumbnail: null,
+    thumbnail: 'https://i.imgur.com/A7gDSJ1.png',
     liveLink: 'https://safe-woodland-54646.herokuapp.com/',
   	github: 'https://github.com/jcruzz/Registration-Form-Redux',
     language: 'Javascript',
@@ -27,7 +27,7 @@ module.exports = [
   },
   {
   	name: 'Saber Forums',
-    thumbnail: null,
+    thumbnail: 'https://i.imgur.com/VOgeNzZ.png',
   	liveLink: 'http://saber-forums.herokuapp.com/#/',
     github: 'https://github.com/jcruzz/Saber-Forums',
     language: 'Javascript',
@@ -66,7 +66,7 @@ module.exports = [
   },
   {
   	name: 'Char Sortinator',
-    thumbnail: null,
+    thumbnail: 'https://i.imgur.com/s1amF2S.png',
   	liveLink: 'https://damp-falls-31971.herokuapp.com/',
     github: 'https://github.com/jcruzz/Char-Sortinator-Part-Deux',
     language: 'Javascript',
@@ -78,7 +78,7 @@ module.exports = [
   },
   {
   	name: 'PokeRoster',
-    thumbnail: null,
+    thumbnail: 'https://i.imgur.com/0Rrq8h0.png',
   	liveLink: 'https://pokeroster.herokuapp.com/',
     github: 'https://github.com/jcruzz/PokeRoster',
     language: 'Javascript',
