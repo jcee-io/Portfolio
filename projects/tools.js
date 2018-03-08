@@ -25,7 +25,6 @@ module.exports = [
             A React boilerplate that comes with Redux.
           `
   },
-  },
   {
   	name: 'React Starter',
     thumbnail: null,
