@@ -74,6 +74,10 @@ const ProjectEntry = props => {
       #${name} {
         background: ${background};
         background-size: 100% 100%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #f8f9fa;
+        border-radius: 5px;
         width: 400px;
         height: 200px;
       }
@@ -86,9 +90,9 @@ const ProjectEntry = props => {
       <div id={`${name}`} >
       </div>
       <div id="project-buttons">
-        <a href={props.github || '#'} target="blank_" className="btn btn-outline-secondary">Github</a>
+        <a href={props.github || '#'} target="blank_" className="btn btn-outline-light">Github</a>
         {props.liveLink ? 
-          <a href={props.liveLink} target="blank_" className="btn btn-outline-secondary">Live Link</a> : null
+          <a href={props.liveLink} target="blank_" className="btn btn-outline-light">Live Link</a> : null
         }
       </div>
     </div>
@@ -97,14 +101,16 @@ const ProjectEntry = props => {
 
 const DetailedEntry = props => (
   <div className="project-detailed-list-entry">
-    <h3>{props.name}</h3>
-    <p>Language:<br/>{props.language || 'Unknown'}</p>
-    <p>Stack:<br/>{props.stack || 'Unknown'}</p>
-    <p> Description:<br/>{props.info || 'None, will update'}</p>
+    <div className="project-detailed-info">
+      <h3>{props.name}</h3>
+      <p>Language:<br/>{props.language || 'Unknown'}</p>
+      <p>Stack:<br/>{props.stack || 'Unknown'}</p>
+      <p> Description:<br/>{props.info || 'None, will update'}</p>
+    </div>
       <div id="project-buttons">
-        <a href={props.github || '#'} target="blank_" className="btn btn-outline-secondary">Github</a>
+        <a href={props.github || '#'} target="blank_" className="btn btn-outline-light">Github</a>
         {props.liveLink ? 
-          <a href={props.liveLink} target="blank_" className="btn btn-outline-secondary">Live Link</a> : null
+          <a href={props.liveLink} target="blank_" className="btn btn-outline-light">Live Link</a> : null
         }
       </div>
   </div>

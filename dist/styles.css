@@ -15,6 +15,7 @@ nav {
 
 .header {
 	font-family: 'Roboto', sans-serif;
+	font-size: 50px !important;
 }
 #contact, #about {
 	width: 100%;
@@ -63,13 +64,10 @@ nav {
 #about div {
 	margin: 2% 0 10% 0;
 }
-#about h1 {
-	font-size: 80px;
-}
 
 #about p {
-	font-size: 30px;
-	margin-top: 75px;
+	font-size: 20px;
+	margin-top: 30px;
 }
 
 /*****************************************
@@ -100,13 +98,12 @@ nav {
 .project-entry {
 	color: whitesmoke;
 	text-align: center;
+
 }
 
 .project-entry-outer {
 	margin: 3% auto;
 }
-
-
 #projects #project-list {
 	margin-top: 20px;
 	display: flex;
@@ -154,18 +151,31 @@ nav {
 	font-size: 20px;
 }
 
+.project-detailed-info {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 3%;
+  color: #f8f9fa;
+  transition-duration: 500ms;
+}
+
+.project-detailed-info:hover {
+	background: #f8f9fa;
+	color: black;
+}
+
 /*****************************************
  Contact Me
 ******************************************/
 #contact {
-	padding: 1% 2%;
-}
-#contact h1{
-	font-size: 80px;
+	padding: 2% 2%;
 }
 
 #contact h2{
 	font-size: 40px;
+	text-align: center;
 }
 
 #contact label {
