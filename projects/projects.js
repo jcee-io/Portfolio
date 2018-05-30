@@ -1,5 +1,21 @@
 module.exports = [
   {
+    name: 'hangoutsidesf',
+    thumbnail: 'https://i.imgur.com/PUPfgrQm.png',
+    liveLink: null,
+    github: 'https://github.com/hangoutsidesf/hangoutsidesf',
+    language: 'Javascript',
+    stack: 'HTML, CSS, React, Express, Node',
+    info: `
+            I participated as a contributer in this team in charge of the front end
+            as well as implementing the UI/UX of the web application currently in development
+            I designed the UI using SASS and CSS Grids. This UI is friendly across
+            all devices including portrait and landscape orientations. This application
+            is designed as a Yelp-like website for parklets for those who are interested
+            in hanging out around the city of San Francisco.
+          `
+  },
+  {
   	name: 'Polling.io',
     thumbnail: 'https://i.imgur.com/u1zwc3I.png',
     liveLink: 'http://polling-io.herokuapp.com/',
@@ -33,9 +49,9 @@ module.exports = [
     language: 'Javascript',
     stack: 'Redis, Node/Express, Axios, shortid',
     info: `
-            This is a url-shortening microservice that uses Redis as the database for constant database lookups. 
-            The key of the database is the generated shortid (which uses the endpoint '/:id'), and the value that 
-            comes out is the website it shortened. The system design has two approaches, to create a shortened url, and to use a shortened url. 
+            This is a url-shortening microservice that uses Redis as the database for constant database lookups.
+            The key of the database is the generated shortid (which uses the endpoint '/:id'), and the value that
+            comes out is the website it shortened. The system design has two approaches, to create a shortened url, and to use a shortened url.
           `
   },
   {
@@ -46,8 +62,8 @@ module.exports = [
     language: 'Javascript',
     stack: 'D3.js, HTML, CSS',
     info: `
-            This is a heat map created to measure the land surface temperature from 1753 to 2015. 
-            The graph is populated by bars that correspends to the years and months respectively 
+            This is a heat map created to measure the land surface temperature from 1753 to 2015.
+            The graph is populated by bars that correspends to the years and months respectively
             located at the X and Y axis, and using the color to determine the temperature. More
             information can be shown by hoving over the bar.
           `
@@ -64,7 +80,7 @@ module.exports = [
             future projects that require authentication. It's also doubles as a React-Router boilerplate.
             Future developments will include styling, making a different version with a different database,
             and include social media authentication in order to hit the ground running when developing
-            a new project. 
+            a new project.
           `
   },
 ];
